@@ -8,7 +8,7 @@
 int main(void)
 {
 	long int a = 1, b = 2, next;
-	long int sum = 2; /* Start with 2 because it's the first even Fibonacci number */
+	long int sum = 2; /* First even Fibonacci number */
 
 	while (1)
 	{
