@@ -10,11 +10,11 @@ int main(void)
 	int count;
 	long int a = 1, b = 2;
 	long int high1, high2, low1, low2;
-	long int divisor = 1000000000; /* To split large numbers */
+	long int divisor = 1000000000; /* Split for large numbers */
 
 	printf("%ld, %ld", a, b);
 
-	for (count = 3; count <= 92; count++) /* First 92 numbers fit in long int */
+	for (count = 3; count <= 92; count++) /* Print first 92 normally */
 	{
 	long int next = a + b;
 	printf(", %ld", next);
@@ -22,6 +22,7 @@ int main(void)
 	b = next;
 	}
 
+	/* Split large numbers beyond 92 */
 	high1 = a / divisor, low1 = a % divisor;
 	high2 = b / divisor, low2 = b % divisor;
 
@@ -42,6 +43,6 @@ int main(void)
 	high2 = high_next, low2 = low_next;
 	}
 
-	printf("\n");
+	printf("\n"); /* Single newline at the end */
 	return (0);
 }
