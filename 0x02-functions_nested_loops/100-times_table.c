@@ -17,7 +17,8 @@ void print_number(int n)
  * print_times_table - prints the n times table, starting with 0
  * @n: the times table to print
  *
- * Description: If n is greater than 15 or less than 0, the function does nothing.
+ * Description: If n is greater than 15 or less than 0, the function does
+ * nothing.
  */
 void print_times_table(int n)
 {
@@ -36,14 +37,20 @@ void print_times_table(int n)
 	{
 	_putchar(',');
 	_putchar(' ');
+
 	if (product < 10)
-	_putchar(' '), _putchar(' '); /* Two spaces for single digits */
+	{
+	_putchar(' ');
+	_putchar(' '); /* Two spaces for single digits */
+	}
 	else if (product < 100)
+	{
 	_putchar(' '); /* One space for double digits */
+	}
 	}
 
 	print_number(product);
 	}
 	_putchar('\n');
-	}
+}
 }
