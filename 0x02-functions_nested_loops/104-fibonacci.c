@@ -7,28 +7,27 @@
 int main(void)
 {
 	int count;
-	long int a = 1, b = 2;
-	long int high1, high2, low1, low2;
-	long int divisor = 1000000000; /* Used to handle large numbers */
+	unsigned long a = 1, b = 2, next;
+	unsigned long high1, high2, low1, low2;
+	unsigned long divisor = 1000000000;
 
-	printf("%ld, %ld", a, b);
+	printf("%lu, %lu", a, b);
 
-	for (count = 3; count <= 92; count++) /* First 92 Fibonacci numbers */
+	for (count = 3; count <= 92; count++)
 	{
-	long int next = a + b;
-	printf(", %ld", next);
+	next = a + b;
+	printf(", %lu", next);
 	a = b;
 	b = next;
 	}
 
-	/* Handling large numbers beyond 92 */
 	high1 = a / divisor, low1 = a % divisor;
 	high2 = b / divisor, low2 = b % divisor;
 
 	for (count = 93; count <= 98; count++)
 	{
-	long int high_next = high1 + high2;
-	long int low_next = low1 + low2;
+	unsigned long high_next = high1 + high2;
+	unsigned long low_next = low1 + low2;
 
 	if (low_next >= divisor)
 	{
@@ -36,12 +35,12 @@ int main(void)
 	low_next -= divisor;
 	}
 
-        printf(", %ld%09ld", high_next, low_next); /* Ensuring proper formatting */
+	printf(", %lu%09lu", high_next, low_next);
 
 	high1 = high2, low1 = low2;
 	high2 = high_next, low2 = low_next;
 	}
 
-	printf("\n"); /* Ensuring proper new line at the end */
+	printf("\n");
 	return (0);
 }
