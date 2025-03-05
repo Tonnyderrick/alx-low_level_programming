@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "main.h"
 
 /**
  * _puts - Prints a string followed by a new line to stdout.
@@ -8,10 +8,10 @@
  */
 void _puts(char *str)
 {
-	while (*str != '\0')
+	while (*str)
 	{
-	putchar(*str);
+	_putchar(*str);
 	str++;
 	}
-	putchar('\n');
+	_putchar('\n');
 }
