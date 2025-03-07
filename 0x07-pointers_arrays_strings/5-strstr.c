@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>
+#include <stddef.h>  // Include this header for NULL
 
 /**
  * _strstr - Locates a substring
@@ -14,7 +14,7 @@ char *_strstr(char *haystack, char *needle)
 	int i, j;
 
 	if (*needle == '\0')
-	  return (haystack);
+	return (haystack);
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
