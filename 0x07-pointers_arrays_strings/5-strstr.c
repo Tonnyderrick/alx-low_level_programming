@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stddef.h>  // Include this header for NULL
+#include <stddef.h>
 
 /**
  * _strstr - Locates a substring
